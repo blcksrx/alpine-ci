@@ -1,0 +1,6 @@
+FROM python:3.9.0-slim
+MAINTAINER <blcksrx@gmail.com> Hossein Torabi
+
+ARG ANSIBLE_LINT_VERSION 
+
+RUN pip install --compile --no-cache-dir ansible-lint==${ANSIBLE_LINT_VERSION}

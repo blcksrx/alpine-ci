@@ -1,0 +1,7 @@
+FROM python:3.9.0-slim
+MAINTAINER <blcksrx@gmail.com> Hossein Torabi
+
+ARG ANSIBLE_VERSION 
+
+RUN apt-get update && apt-get install openssh-client -y && rm -rf /var/lib/apt/lists/*
+RUN pip install --compile --no-cache-dir ansible==${ANSIBLE_VERSION}
