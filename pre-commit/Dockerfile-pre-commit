@@ -1,0 +1,6 @@
+FROM python:3.9.0-slim
+MAINTAINER <blcksrx@gmail.com> Hossein Torabi
+
+ARG PRE_COMMIT_VERSION
+
+RUN pip install --compile --no-cache-dir pre-commit==${PRE_COMMIT_VERSION}
